@@ -88,6 +88,34 @@
                 </code></pre>
               </td>
             </tr>
+
+            <tr>
+              <td>
+                <pre><code class="lisp">
+(map (lm (x) (+ 2 x)) '(1 2 3))
+(map ^(+ 2 %) '(1 2 3))
+                </code></pre>
+              </td>
+              <td>
+                <pre><code class="lisp">
+(mapcar (lambda (x) (+ 2 x)) '(1 2 3))
+                </code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <pre><code class="lisp">
+(map #'- #(1 2 3 4))
+                </code></pre>
+              </td>
+              <td>
+                <pre><code class="lisp">
+(map 'vector #'- #(1 2 3 4))
+                </code></pre>
+              </td>
+            </tr>
+
             <tr>
               <td>
                 <pre><code class="lisp">
@@ -159,6 +187,10 @@
           </tbody>
         </table>
       </section>
+
+      <div id="comparison">
+        <a href="https://github.com/cl21/cl21/wiki/Language-Difference-between-CL21-and-Common-Lisp">Read more.</a>
+      </div>
 
       <section id="motivation">
         <h2>Motivation</h2>
